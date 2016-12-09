@@ -1,0 +1,199 @@
+$black           : #000;
+$white           : #fff;
+
+$text-color           : $black;
+$background-color     : #e2e2e2;
+$input-panel-color    : #CDDC39;
+$shadow-color         : grey;
+$active-element-color : #FF5252;
+$random-button-color  : #F0F4C3;
+
+%main-shadow {
+  box-shadow: 10px 10px 0 $shadow-color;
+}
+
+html, body, .my-container {
+  height: 100%;
+}
+
+body {
+  background: $background-color;
+  font-family: 'Roboto', 'Exo', sans-serif;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  &:link, &:hover, &:visited, &:active {
+  color: $black;
+  text-decoration: none;
+  }
+}
+
+#container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  min-height: 100vh;
+}
+
+.my-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-grow: 1;
+  margin: 2em auto 2em;
+  width: 90%;
+  max-width: 38rem;
+}
+
+.my-input-panel {
+  @extend %main-shadow;
+  background-color: $input-panel-color;
+  color: $text-color;
+  text-align: center;
+  -webkit-perspective: 700px;
+  -moz-perspective: 700px;
+  -ms-perspective: 700px;
+  perspective: 700px;
+  -webkit-perspective-origin: center bottom;
+  -moz-perspective-origin: center bottom;
+  -ms-perspective-origin: center bottom;
+  perspective-origin: center bottom;
+  h1 {
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+  form {
+    input {
+      background-color: $input-panel-color;
+      border: none;
+      outline: none;
+      width: 200px;
+      font-size: 1.5rem;
+      transition: border-bottom .2s, color .2s;
+      -o-transition: border-bottom .2s, color .2s;
+      -moz-transition: border-bottom .2s, color .2s;
+      -webkit-transition: border-bottom .2s, color .2s;
+      &:focus, &:hover {
+        color: darken($active-element-color, 15%);
+        ~ #my-bottom-border2 {
+          width: 61%;
+        }
+      }
+    }
+    .my-submit-button {
+      background-color: $input-panel-color;
+      border: none;
+      font-size: 1.5rem;
+      outline: 0;
+      transition: border-bottom .2s;
+      -o-transition: border-bottom .2s;
+      -moz-transition: border-bottom .2s;
+      -webkit-transition: border-bottom .2s;
+      &:hover {
+       .glyphicon-flipped {
+          transform: scaleX(1);
+          -moz-transform: scaleX(1);
+          -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+        }
+      }
+      span {
+        font-size: 1.8rem;
+        transition: transform .2s, color .2s;
+        -o-transition: transform .2s, color .2s;
+        -moz-transition: transform .2s, color .2s;
+        -webkit-transition: transform .2s, color .2s;
+      }
+      .glyphicon-flipped {
+        color: darken($active-element-color, 15%);
+        transform: scaleX(-1);
+        -moz-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+      }
+    }
+  }
+  #my-bottom-border {
+    width: 61%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $black;
+  }
+  #my-bottom-border2 {
+    width: 0;
+    height: 1px;
+    margin: -1px auto 0;
+    background-color: darken($active-element-color, 15%);
+    transition: width .2s;
+    -o-transition: width .2s;
+    -moz-transition: width .2s;
+    -webkit-transition: width .2s;
+  }
+
+  .my-random-button {
+    background-color: $random-button-color;
+    padding: 5px 10px;
+    border: none;
+    margin: 30px 0 15px;
+    transition: transform .2s, box-shadow .2s, background-color .2s;
+    -o-transition: transform .2s, box-shadow .2s, background-color .2s;
+    -moz-transition: transform .2s, box-shadow .2s, background-color .2s;
+    -webkit-transition: transform .2s, box-shadow .2s, background-color .2s;
+    box-shadow: 0 0 $shadow-color;
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      transform: translateZ(10px);
+      box-shadow: 5px 5px $shadow-color;
+    }
+    &:active {
+      transform: translateZ(10px);
+      box-shadow: 5px 5px $shadow-color;
+      background-color: darken($random-button-color, 10%);
+    }
+  }
+}
+
+.my-list {
+  flex-grow: 2;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-perspective: 700px;
+  -moz-perspective: 700px;
+  -ms-perspective: 700px;
+  perspective: 700px;
+}
+
+.my-list-item {
+  @extend %main-shadow;
+  background-color: $white;
+  padding: 10px;
+  flex-grow: 1;
+  transition: transform .2s ease, box-shadow .2s ease, margin-top .2s;
+  -o-transition: transform .2s ease, box-shadow .2s ease, margin-top .2s;
+  -moz-transition: transform .2s ease, box-shadow .2s ease, margin-top .2s;
+  -webkit-transition: transform .2s ease, box-shadow .2s ease, margin-top .2s;
+  .my-search-result {
+    opacity: 0;
+    transition: opacity .6s ease;
+    -o-transition: opacity .6s ease;
+    -moz-transition: opacity .6s ease;
+    -webkit-transition: opacity .6s ease;
+  }
+  &.cascaded:hover {
+    transform: translate3d(0, 0, 10px);
+    transform-origin: left center;
+    box-shadow: 18px 18px $shadow-color;
+  }
+}
+
+.animated {
+  background-color: $black;
+}
