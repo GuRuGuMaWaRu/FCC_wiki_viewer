@@ -17,4 +17,4 @@ Another project that gave me a little pause. I had to think of something cool an
 
 ## Video Walkthrough
 
-![](https://github.com/gurugumawaru/FCC_random_quotes/blob/master/fcc_wikipedia_viewer.gif)
+![](https://github.com/gurugumawaru/FCC_wiki_viewer/blob/master/fcc_wikipedia_viewer.gif)
