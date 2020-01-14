@@ -12,7 +12,7 @@ Another project that gave me a little pause. I had to think of something cool an
 ## Links
 
 - [ ] this project at codepen: [https://codepen.io/GuRuGu/full/OXXQjQ/](https://codepen.io/GuRuGu/full/OXXQjQ/)
-- [ ] this project at gh-pages: [https://gurugumawaru.github.io/FCC_wiki_viewer/](https://gurugumawaru.github.io/FCC_wiki_viewer/)
+- [ ] this project at gh-pages: [https://gurugu-fcc-projects.github.io/FCC__wiki_viewer/](https://gurugu-fcc-projects.github.io/FCC__wiki_viewer/)
 - [ ] freecodecamp challenge: [https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-wikipedia-viewer)
 
 ## Video Walkthrough
